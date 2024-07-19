@@ -2,6 +2,9 @@
 
 This project aims to show how to use `Testcontainers` for Java to spin up a Docker container with a service providing a REST API for testing purposes. It also demonstrates using `WireMock` to proxy this service and inject delays or faults for specific endpoints.
 
+We'll use this setup to test the integration between two very simple Spring Boot applications. Namely, a [client](https://github.com/etrandafir93/wiremock-testcontainers-practice/blob/main/client/src/main/java/etr/learning/moneyexchange/MoneyExchangeApp.java) app, and a [server](https://github.com/etrandafir93/wiremock-testcontainers-practice/blob/main/server/src/main/java/etr/learning/conversionrates/ConversionRatesApp.java) app which expose a REST API.
+
+Let's look over the break down of [IntegrationTest.java](https://github.com/etrandafir93/wiremock-testcontainers-practice/blob/main/client/src/test/java/etr/learning/moneyexchange/IntegrationTest.java)
 
 ### JUnit5 Extensions
 ```java
